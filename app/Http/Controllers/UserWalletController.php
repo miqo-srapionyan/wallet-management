@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\DeleteUserWalletRequest;
 use App\Http\Requests\SaveUserWalletRequest;
 use App\Http\Resources\UserWallets;
 use App\UserWallet;
-use Illuminate\Http\Request;
 use App\Http\Resources\ResourceResponder;
 use Illuminate\Support\Facades\Auth;
 

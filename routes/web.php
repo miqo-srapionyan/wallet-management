@@ -17,21 +17,27 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes(['verify' => true]);
 
-Route::get('/', 'DashboardController@index')->name('/')->middleware('auth', 'verified');
 
+// Social login facebook
 Route::get('auth/facebook', 'Auth\FacebookController@redirectToFacebook');
 Route::get('auth/facebook/callback', 'Auth\FacebookController@handleFacebookCallback');
 
+// Social login google
 Route::get('auth/google', 'Auth\GoogleController@redirectToGoogle');
 Route::get('auth/google/callback', 'Auth\GoogleController@handleGoogleCallback');
 
 Route::group(['middleware' => ['auth', 'verified']],function () {
+    // Dashboard
+    Route::get('/', 'DashboardController@index')->name('/')->middleware('auth', 'verified');
+
+    // Wallets
     Route::get('/wallets', 'UserWalletController@get')->name('/wallets');
     Route::get('/wallets/{id}', 'UserWalletController@getById')->name('/wallets');
     Route::post('/wallets', 'UserWalletController@store')->name('/wallets');
     Route::patch('/wallets/{id}', 'UserWalletController@edit')->name('/wallets');
     Route::delete('/wallets/{id}', 'UserWalletController@delete')->name('/wallets');
 
+    // Wallet Balance
     Route::get('/wallets/{id}/balance', 'UserWalletBalanceController@get')->name('/wallets/{id}/balance');
     Route::post('/wallets/{id}/balance', 'UserWalletBalanceController@store')->name('/wallets/{id}/balance');
 });

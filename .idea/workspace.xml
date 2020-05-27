@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="32bf361d-122b-4df2-81cd-eecec651d213" name="Default Changelist" comment="" />
+    <list default="true" id="32bf361d-122b-4df2-81cd-eecec651d213" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserWalletController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserWalletController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/Dashboard/Main.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/Dashboard/Main.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -178,12 +187,24 @@
       <option name="presentableId" value="Default" />
       <updated>1590516341522</updated>
       <workItem from="1590516344644" duration="4446000" />
-      <workItem from="1590562426419" duration="42399000" />
+      <workItem from="1590562426419" duration="43988000" />
     </task>
+    <task id="LOCAL-00001" summary=".">
+      <created>1590608988653</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1590608988653</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="." />
+    <option name="LAST_COMMIT_MESSAGE" value="." />
   </component>
   <component name="WindowStateProjectService">
     <state x="714" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1590580019600">
@@ -194,10 +215,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="279" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590585309633" />
+    <state x="598" y="119" key="CommitChangelistDialog2" timestamp="1590608986045">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="598" y="119" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1590608986045" />
     <state x="794" y="452" key="NewPhpFileDialog" timestamp="1590576461716">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="452" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590576461716" />
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2" timestamp="1590608996715">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590608996715" />
     <state x="668" y="349" key="com.intellij.ide.util.TipDialog" timestamp="1590562435511">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -206,9 +235,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="611" y="139" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1590608197783" />
-    <state x="667" y="276" width="1132" height="733" key="find.popup" timestamp="1590574877426">
+    <state x="667" y="276" width="1132" height="733" key="find.popup" timestamp="1590609128785">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="276" width="1132" height="733" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1590574877426" />
+    <state x="667" y="276" width="1132" height="733" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1590609128785" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1590609417085">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1590609417085" />
   </component>
 </project>

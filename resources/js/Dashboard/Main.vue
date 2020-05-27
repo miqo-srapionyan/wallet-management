@@ -180,13 +180,12 @@
             selectedWallet: function (id){
                 if(id){
                     axios.get(this.endpointUrl+"/wallets/"+id+"/balance").then(response => {
-                        console.log(response.data);
+
                         this.tableData = response.data;
                     }).catch(e => {
-                        console.log('error', e.response);
+
                     });
                 }
-
             }
         },
         components:{
@@ -233,7 +232,7 @@
                         Object.keys(e.response.data.errors).map(key => {
                             this.$refs[key].innerText = e.response.data.errors[key][0]
                         });
-                        console.log('error', e.response);
+
                     });
                 }else{
                     axios.post(this.endpointUrl+"/wallets", this.wallet).then(handleCallback).catch(e => {
@@ -241,10 +240,8 @@
                         Object.keys(e.response.data.errors).map(key => {
                             this.$refs[key].innerText = e.response.data.errors[key][0]
                         });
-                        console.log('error', e.response);
                     });
                 }
-
 
             },
 
@@ -264,7 +261,7 @@
                     this.cardsLoading = false;
                 }).catch(e => {
                     this.cardsLoading = false;
-                    console.log('error', e.response);
+
                 });
             },
 
@@ -283,14 +280,12 @@
                             this.selectedWallet = null;
                             this.tableData = [];
                         }
-
                     }).catch(e => {
 
-                        console.log('error', e.response);
                     });
                 }
             },
-            openCredit(type){console.log(type);
+            openCredit(type){
                 this.addWalletBalanceDialog = true;
                 this.balance.type = type;
             },
@@ -310,7 +305,7 @@
                     Object.keys(e.response.data.errors).map(key => {
                         this.$refs[key].innerText = e.response.data.errors[key][0]
                     });
-                    console.log('error', e.response);
+
                 });
             }
         },
