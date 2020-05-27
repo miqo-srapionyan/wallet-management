@@ -20,6 +20,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
@@ -121,6 +124,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1cSK1m8NIBXl7trwC1pAvVyH9vM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -174,7 +178,7 @@
       <option name="presentableId" value="Default" />
       <updated>1590516341522</updated>
       <workItem from="1590516344644" duration="4446000" />
-      <workItem from="1590562426419" duration="42074000" />
+      <workItem from="1590562426419" duration="42399000" />
     </task>
     <servers />
   </component>
