@@ -10,7 +10,7 @@ cash, then fill it with your expences or income to track your balanace.
 ##### Notes
 I do not validate front end, so i keep my time and energy to focus on back-end part, but i 
 know that it is important thing. There are some UI issues (i am not professional front-end guy)
-sorry for that.
+sorry for that. Also iam not sending confirmation email whil registring with social.
 
 ##### How to install and use
 - First clone the repo and go to the cloned directory
@@ -19,6 +19,7 @@ sorry for that.
 - Run `npm run dev` to get compiled js
 - Copy credentials from .env.example to your .env file (i keep it on example so you dont need to open facebook app or google app) but you need to configure mail using your mailtrap or other service
 - Config database for both .env and .env.testing
+- Run `php artisan migrate` and `php artisan migrate --env=testing`
 - Run server `php artisan serve`
 - Run tests `./vendor/bin/phpunit tests/Http`
 - Enjoy the application :pizza: 
