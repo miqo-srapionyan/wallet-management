@@ -1,23 +1,23 @@
 ## Wallet Management
 
-Okay, so this app is about online wallet managemnt. You can add your wallets credit cars and or 
-cash, then fill it with your expences or income to track your balanace.
+Okay, so this app is about online wallet management. You can add your wallets, credit cards and or 
+cash, then fill it with your expenses or income to track your balanace.
 ##### Used packages
-- Default laravel auth system (with some customization)
-- Laravel Socialite package to make register and login vide facebook or google
-- VueJS as frontend service for dashboard page (with some additinal libraries)
+- Default Laravel auth system (with some customization)
+- Laravel Socialite package to make register and login via facebook or google
+- VueJS as frontend service for dashboard page (with some additional libraries)
 
 ##### Notes
-I do not validate front end, so i keep my time and energy to focus on back-end part, but i 
-know that it is important thing. There are some UI issues (i am not professional front-end guy)
-sorry for that. Also iam not sending confirmation email whil registring with social.
+I do not validate front end, so I keep my time and energy to focus on back-end part, but I 
+know that it is important thing. There are some UI issues (I'm not professional front-end guy)
+sorry for that. Also I'm not sending confirmation email while registering with social.
 
 ##### How to install and use
 - First clone the repo and go to the cloned directory
 - Run `composer install`
 - Run `npm install`
 - Run `npm run dev` to get compiled js
-- Copy credentials from .env.example to your .env file (i keep it on example so you dont need to open facebook app or google app) but you need to configure mail using your mailtrap or other service
+- Copy credentials from .env.example to your .env file (I keep it on example so you dont need to open facebook app or google app) but you need to configure mail using your mailtrap or other service
 - Config database for both .env and .env.testing
 - Run `php artisan migrate` and `php artisan migrate --env=testing`
 - Run server `php artisan serve`
