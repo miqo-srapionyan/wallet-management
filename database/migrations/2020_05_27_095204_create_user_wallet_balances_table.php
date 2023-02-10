@@ -18,7 +18,7 @@ class CreateUserWalletBalancesTable extends Migration
             $table->unsignedBigInteger('wallet_id');
             $table->foreign('wallet_id')->references('id')->on('user_wallets')->onDelete('cascade');
             $table->integer('amount')->default(0);
-            $table->enum('type', \App\UserWalletBalance::TYPES);
+            $table->enum('type', \App\Models\UserWalletBalance::TYPES);
             $table->timestamps();
         });
     }

@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\SaveUserWalletRequest;
-use App\Http\Resources\UserWallets;
-use App\UserWallet;
 use App\Http\Resources\ResourceResponder;
+use App\Http\Resources\UserWallets;
+use App\Models\UserWallet;
 use Illuminate\Support\Facades\Auth;
 
 class UserWalletController extends Controller

@@ -2,7 +2,6 @@
 
 namespace App\Http\Resources;
 
-use App\UserWallet;
 use Illuminate\Http\Resources\Json\JsonResource;
 
 class UserWalletBalances extends JsonResource

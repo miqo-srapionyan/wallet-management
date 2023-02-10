@@ -2,23 +2,20 @@
 
 namespace Tests\Http;
 
-use App\User;
-use App\UserWallet;
-use App\UserWalletBalance;
+use App\Models\UserWallet;
+use App\Models\UserWalletBalance;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 class UserWalletBalanceTest extends TestCase
 {
-
     use RefreshDatabase;
 
     private $uri = '/wallets/{id}/balance';
 
-    /* GET */
     public function testGetUserWalletBalanceReturnErrorIfUserNotAuthenticated()
     {
-        $wallet = factory(UserWallet::class)->create([
+        $wallet = UserWallet::factory()->create([
             'user_id' => $this->user->id
         ]);
 
@@ -30,10 +27,10 @@ class UserWalletBalanceTest extends TestCase
     public function testGetUserWalletBalance()
     {
         $user = $this->user;
-        $wallet = factory(UserWallet::class)->create([
+        $wallet = UserWallet::factory()->create([
             'user_id' => $user->id
         ]);
-        $balances = factory(UserWalletBalance::class, 3)->create([
+        $balances = UserWalletBalance::factory(3)->create([
             'wallet_id' => $wallet->id
         ]);
         $response = $this->actingAs($user)->getJson(str_replace("{id}", $wallet->id, $this->uri));
@@ -47,16 +44,15 @@ class UserWalletBalanceTest extends TestCase
         ]);
     }
 
-
-    /* POST */
     public function testCreateNewWalletBalanceRecordReturnErrorIfUserNotAuthenticated()
     {
-        $wallet = factory(UserWallet::class)->create([
+        $wallet = UserWallet::factory()->create([
             'user_id' => $this->user->id
         ]);
+
         $data = [
             'amount' => 15,
-            'type' => UserWallet::TYPES['credit_card'],
+            'type'   => UserWallet::TYPES['credit_card'],
         ];
 
         $response = $this->postJson(str_replace("{id}", $wallet->id, $this->uri), $data);
@@ -66,28 +62,29 @@ class UserWalletBalanceTest extends TestCase
 
     public function testCreateNewWalletBalanceRecordReturnValidationError()
     {
-        $wallet = factory(UserWallet::class)->create([
+        $wallet = UserWallet::factory()->create([
             'user_id' => $this->user->id
         ]);
+
         $data = [
             'amount' => '',
-            'type' => '',
+            'type'   => '',
         ];
 
         $response = $this->actingAs($this->user)->postJson(str_replace("{id}", $wallet->id, $this->uri), $data);
 
         $response->assertStatus(422);
-
     }
 
     public function testCreateNewWalletBalanceRecordReturnValidationErrorNotExistingType()
     {
-        $wallet = factory(UserWallet::class)->create([
+        $wallet = UserWallet::factory()->create([
             'user_id' => $this->user->id
         ]);
+
         $data = [
             'amount' => 10,
-            'type' => 'custom_type',
+            'type'   => 'custom_type',
         ];
 
         $response = $this->actingAs($this->user)->postJson(str_replace("{id}", $wallet->id, $this->uri), $data);
@@ -95,15 +92,15 @@ class UserWalletBalanceTest extends TestCase
         $response->assertStatus(422);
     }
 
-
     public function testCreateNewWalletBalanceRecord()
     {
-        $wallet = factory(UserWallet::class)->create([
+        $wallet = UserWallet::factory()->create([
             'user_id' => $this->user->id
         ]);
+
         $data = [
             'amount' => 15,
-            'type' => UserWalletBalance::TYPES['credit'],
+            'type'   => UserWalletBalance::TYPES['credit'],
         ];
 
         $response = $this->actingAs($this->user)->postJson(str_replace("{id}", $wallet->id, $this->uri), $data);
@@ -117,6 +114,4 @@ class UserWalletBalanceTest extends TestCase
             'amount' => 15,
         ]);
     }
-
-
 }

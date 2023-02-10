@@ -2,7 +2,7 @@
 
 namespace Tests;
 
-use App\User;
+use App\Models\User;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 
 abstract class TestCase extends BaseTestCase
@@ -11,9 +11,9 @@ abstract class TestCase extends BaseTestCase
 
     public function __get($name)
     {
-        if ($name == 'user')
-        {
-            $this->user = factory(User::class)->create();
+        if ($name === 'user') {
+            /** @var \Illuminate\Contracts\Auth\Authenticatable user */
+            $this->user = User::factory()->create();
         }
 
         return $this->$name;

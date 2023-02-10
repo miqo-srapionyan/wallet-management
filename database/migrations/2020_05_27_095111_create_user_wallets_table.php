@@ -1,6 +1,6 @@
 <?php
 
-use App\UserWallet;
+use App\Models\UserWallet;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;

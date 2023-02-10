@@ -17,7 +17,7 @@ sorry for that. Also I'm not sending confirmation email while registering with s
 - Run `composer install`
 - Run `npm install`
 - Run `npm run dev` to get compiled js
-- Copy credentials from .env.example to your .env file (I keep it on example so you dont need to open facebook app or google app) but you need to configure mail using your mailtrap or other service
+- Copy credentials from .env.example to your .env file (you have to create facebook app and google app) and also you need to configure mail using your mailtrap or other service
 - Config database for both .env and .env.testing
 - Run `php artisan migrate` and `php artisan migrate --env=testing`
 - Run server `php artisan serve`

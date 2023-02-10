@@ -5,8 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\SaveUserWalletBalanceRequest;
 use App\Http\Resources\ResourceResponder;
 use App\Http\Resources\UserWalletBalances;
-use App\UserWallet;
-use App\UserWalletBalance;
+use App\Models\UserWallet;
+use App\Models\UserWalletBalance;
 use Illuminate\Support\Facades\Auth;
 
 class UserWalletBalanceController extends Controller
